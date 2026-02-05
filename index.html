@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloudepok — AI-First Engineering & Consulting</title>
+  <meta name="description" content="AI-First Engineering & Consulting — Cloud • Data • ML Solutions" />
+  <meta name="keywords"
+    content="AI consulting, cloud engineering, machine learning, data engineering, MLOps, LLM, AI strategy" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
+
+  <!-- Manrope font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <canvas id="dots-canvas" aria-hidden="true"></canvas>
+
+  <div class="top-ribbon">Cloudepok — full website <strong>coming soon</strong>. <a href="#contact">Contact us</a></div>
+
+  <header class="site-header">
+    <a class="logo" href="#" aria-label="Cloudepok">
+      <span class="logo-word"><span class="cloud">Cloud</span><span class="epok">epok</span></span>
+    </a>
+
+    <div class="nav-actions">
+      <button class="burger two" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu-popover">
+        <span></span><span></span>
+      </button>
+
+      <aside id="menu-popover" class="menu-popover" aria-hidden="true" role="dialog" aria-modal="false">
+        <nav class="menu-list">
+          <a href="#services" class="menu-item">Services</a>
+          <a href="#about" class="menu-item">About</a>
+          <a href="#contact" class="menu-item">Contact</a>
+          <div class="menu-sep"></div>
+          <a href="#contact" class="menu-cta">Get in touch</a>
+        </nav>
+      </aside>
+    </div>
+  </header>
+
+  <div id="overlay" class="overlay-light" hidden></div>
+
+  <main>
+    <section class="hero split">
+      <div class="container split-grid">
+        <div class="left animate-on-scroll">
+          <h1>Transform your business with <span class="text-brand">AI</span></h1>
+          <p class="superpill">Cloud • Data • ML Engineering</p>
+          <p class="lede">We partner with forward-thinking companies to build intelligent, scalable systems that drive
+            real business outcomes—from AI strategy to production-ready solutions.</p>
+          <div class="cta-row">
+            <a class="btn" href="#services">Explore services</a>
+            <a class="btn btn-ghost" href="#contact">Talk to us</a>
+          </div>
+        </div>
+        <div class="right">
+          <div class="pane animate-on-scroll">
+            <div class="pane-title">AI Strategy</div>
+            <div class="pane-body">
+              <ul>
+                <li>Opportunity mapping & use-case prioritization</li>
+                <li>Governance, ethics & risk frameworks</li>
+                <li>ROI-driven transformation roadmaps</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pane animate-on-scroll">
+            <div class="pane-title">Engineering Excellence</div>
+            <div class="pane-body">
+              <ul>
+                <li>Cloud-native data platforms</li>
+                <li>LLM integrations & AI agents</li>
+                <li>End-to-end MLOps pipelines</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="animate-on-scroll">What we do</h2>
+        <div class="grid">
+          <div class="card animate-on-scroll">
+            <h3>AI Strategy & Consulting</h3>
+            <p>Identify high-impact AI opportunities, create actionable roadmaps, and align technology investments with
+              measurable business outcomes.</p>
+            <a class="link" href="#contact">Start a conversation →</a>
+          </div>
+          <div class="card animate-on-scroll">
+            <h3>Cloud & Data Engineering</h3>
+            <p>Design and build modern data platforms on AWS, GCP, or Azure—secure, scalable, and optimized for AI-ready
+              analytics.</p>
+            <a class="link" href="#contact">Start a conversation →</a>
+          </div>
+          <div class="card animate-on-scroll">
+            <h3>Applied ML Solutions</h3>
+            <p>Ship production-grade ML models, LLM-powered features, and autonomous AI agents that integrate seamlessly
+              into your products.</p>
+            <a class="link" href="#contact">Start a conversation →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="container narrow">
+        <h2 class="animate-on-scroll">About Cloudepok</h2>
+        <p class="animate-on-scroll">We're a team of engineers, architects, and AI specialists who believe great
+          technology should deliver measurable impact. With deep expertise across cloud infrastructure, data
+          engineering, and machine learning, we help organizations move from AI curiosity to competitive advantage.</p>
+        <p class="animate-on-scroll" style="margin-top: 16px; color: var(--muted);">Whether you're modernizing legacy
+          systems, building your first ML pipeline, or scaling AI across the enterprise—we're here to make it happen.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container narrow">
+        <h2 class="animate-on-scroll">Let's Build Something Great</h2>
+        <p class="muted animate-on-scroll">We're putting final touches on our full site. <strong>Coming soon</strong> —
+          but you can reach us today.</p>
+        <form id="contact-form" class="contact-form animate-on-scroll"
+          action="https://formspree.io/f/aruna@cloudepok.com" method="POST">
+          <input type="hidden" name="_subject" value="New Cloudepok Contact Form Submission">
+          <input type="hidden" name="_next" value="">
+          <label>
+            <span>Name</span>
+            <input required type="text" name="name" placeholder="Your name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input required type="email" name="email" placeholder="you@company.com" />
+          </label>
+          <label class="full">
+            <span>Message</span>
+            <textarea required name="message" rows="5" placeholder="How can we help?"></textarea>
+          </label>
+          <button class="btn" type="submit" id="submit-btn">
+            <span class="btn-text">Send message</span>
+            <span class="btn-loading" hidden>Sending...</span>
+          </button>
+        </form>
+        <div id="form-success" class="form-success" hidden>
+          <div class="success-icon">✓</div>
+          <p><strong>Thank you!</strong> We'll get back to you within 24 hours.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© <span id="year"></span> Cloudepok • AI-First Engineering & Consulting</span>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Burger + popover logic
+    const burger = document.getElementById('burger');
+    const pop = document.getElementById('menu-popover');
+    const overlay = document.getElementById('overlay');
+
+    function setOpen(open) {
+      burger.classList.toggle('open', open);
+      pop.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+      pop.setAttribute('aria-hidden', String(!open));
+      overlay.hidden = !open;
+    }
+
+    burger.addEventListener('click', () => setOpen(!pop.classList.contains('open')));
+    overlay.addEventListener('click', () => setOpen(false));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+
+    // Close popover then smooth-scroll to anchors
+    function handleMenuClick(e) {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const href = a.getAttribute('href') || '';
+      if (!href.startsWith('#')) { setOpen(false); return; }
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        setOpen(false);
+        setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
+        setTimeout(() => history.pushState(null, '', href), 120);
+      }
+    }
+    document.querySelector('.menu-list').addEventListener('click', handleMenuClick);
+
+    // Form submission handling
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const btnText = submitBtn.querySelector('.btn-text');
+    const btnLoading = submitBtn.querySelector('.btn-loading');
+    const formSuccess = document.getElementById('form-success');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Show loading state
+      btnText.hidden = true;
+      btnLoading.hidden = false;
+      submitBtn.disabled = true;
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.hidden = true;
+          formSuccess.hidden = false;
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        alert('Something went wrong. Please try again or email us directly.');
+        btnText.hidden = false;
+        btnLoading.hidden = true;
+        submitBtn.disabled = false;
+      }
+    });
+
+    // Scroll animations
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    animateElements.forEach(el => observer.observe(el));
+
+    // Interactive dots background
+    (function () {
+      const c = document.getElementById('dots-canvas');
+      const ctx = c.getContext('2d');
+      let w, h, dots = [], mouse = { x: 0, y: 0 };
+
+      function resize() {
+        w = c.width = window.innerWidth;
+        h = c.height = window.innerHeight;
+        build();
+      }
+
+      function build() {
+        dots = [];
+        const spacing = 36;
+        for (let y = spacing / 2; y < h; y += spacing) {
+          for (let x = spacing / 2; x < w; x += spacing) {
+            dots.push({ x, y, r: 1.2 });
+          }
+        }
+        draw();
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--brand-600').trim() || '#FF4713';
+        const maxDist = 160;
+        for (const d of dots) {
+          const dx = d.x - mouse.x;
+          const dy = d.y - mouse.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const k = Math.max(0, 1 - dist / maxDist);
+          const rad = d.r + k * 1.8;
+          ctx.globalAlpha = 0.08 + k * 0.22;
+          ctx.beginPath();
+          ctx.arc(d.x + dx * 0.02, d.y + dy * 0.02, rad, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener('resize', resize);
+      window.addEventListener('mousemove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; });
+      resize();
+    })();
+  </script>
+</body>
+
+</html>
