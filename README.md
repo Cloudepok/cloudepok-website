@@ -1,6 +1,6 @@
 # Cloudepok Website
 
-AI-First Engineering & Consulting website.
+Cloud Engineering & Consulting website.
 
 ## Quick Start
 
@@ -52,3 +52,4 @@ git push -u origin main
 ## Contact Form
 
 The contact form uses [Formspree](https://formspree.io) → submissions go to `aruna@cloudepok.com`.
+# cloudepok-website
