@@ -128,8 +128,7 @@
     <header class="header" id="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">☁️</div>
-                <span>Cloud</span><span>epok</span>
+                <span>Cloud<span style="color:var(--brand-primary)">epok</span></span>
             </a>
 
             <nav class="nav">
@@ -178,7 +177,26 @@
                         <li>Backup & Disaster Recovery Management</li>
                     </ul>
                 </div>
-                <div class="visual-box">🛡️</div>
+                <div class="visual-box">
+                    <svg class="svg-illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Shield Background -->
+                        <path class="svg-primary" fill-opacity="0.1" stroke="var(--brand-primary)" stroke-width="4"
+                            d="M100 20 L160 50 V100 C160 140 100 180 100 180 C100 180 40 140 40 100 V50 Z" />
+                        <!-- Inner Operations Radar -->
+                        <circle class="svg-secondary-stroke" fill="none" stroke-width="2" cx="100" cy="95" r="40" />
+                        <circle class="svg-secondary-stroke" fill="none" stroke-width="1" cx="100" cy="95" r="20"
+                            stroke-dasharray="4 4" />
+                        <!-- Radar Sweep -->
+                        <g class="anim-spin" style="transform-origin: 100px 95px;">
+                            <path class="svg-accent" fill-opacity="0.3" d="M100 95 L140 95 A40 40 0 0 0 100 55 Z" />
+                            <line stroke="var(--brand-accent)" stroke-width="2" x1="100" y1="95" x2="100" y2="55" />
+                        </g>
+                        <!-- Status Dots -->
+                        <circle class="svg-primary anim-pulse" cx="120" cy="75" r="4" />
+                        <circle class="svg-accent anim-pulse" cx="75" cy="115" r="4" style="animation-delay: 0.5s;" />
+                        <circle class="svg-secondary anim-pulse" cx="115" cy="120" r="4" style="animation-delay: 1s;" />
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -197,7 +215,28 @@
                         <li>SOC2, HIPAA & GDPR Compliance Enforcement</li>
                     </ul>
                 </div>
-                <div class="visual-box">🔒</div>
+                <div class="visual-box">
+                    <svg class="svg-illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Lock Base -->
+                        <rect class="svg-secondary" fill-opacity="0.9" x="60" y="100" width="80" height="60" rx="8" />
+                        <path class="svg-primary" fill-opacity="0.2" d="M60 100 h80 v30 h-80 z" />
+                        <!-- Lock Shackle -->
+                        <path class="svg-primary-stroke anim-float" fill="none" stroke-width="12" stroke-linecap="round"
+                            d="M75 100 V70 A25 25 0 0 1 125 70 V100" />
+                        <!-- Keyhole -->
+                        <circle class="svg-bg" fill="var(--bg-primary)" cx="100" cy="125" r="8" />
+                        <path class="svg-bg" fill="var(--bg-primary)" d="M96 125 L92 145 H108 L104 125 Z" />
+                        <!-- Protection Waves -->
+                        <g class="anim-pulse" style="animation-delay: 0s;">
+                            <path class="svg-accent-stroke" fill="none" stroke-width="3" stroke-linecap="round"
+                                d="M40 90 Q100 50 160 90" />
+                        </g>
+                        <g class="anim-pulse" style="animation-delay: 0.5s;">
+                            <path class="svg-accent-stroke" fill="none" stroke-width="2" stroke-linecap="round"
+                                d="M50 70 Q100 30 150 70" />
+                        </g>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -216,7 +255,38 @@
                         <li>Architectural Reviews for Cost Efficiency</li>
                     </ul>
                 </div>
-                <div class="visual-box">💸</div>
+                <div class="visual-box">
+                    <svg class="svg-illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Optimization Graph -->
+                        <path class="svg-secondary" fill-opacity="0.1"
+                            d="M40 160 L40 60 L80 100 L120 50 L160 90 L160 160 Z" />
+                        <path class="svg-secondary-stroke" fill="none" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-dasharray="10 5" d="M40 60 L80 100 L120 50 L160 90" />
+
+                        <!-- Cost Saving Arrow (Downward trend) -->
+                        <path class="svg-primary-stroke" fill="none" stroke-width="6" stroke-linecap="round"
+                            stroke-linejoin="round" d="M50 100 L100 140 L150 120" />
+                        <polygon class="svg-primary" points="100,150 110,130 90,130"
+                            transform="translate(50,-10) rotate(-20)" />
+
+                        <!-- Money/Value Indicators -->
+                        <g class="anim-float" style="animation-delay: 0s;">
+                            <circle class="svg-accent" cx="60" cy="40" r="15" />
+                            <text x="60" y="45" font-family="sans-serif" font-weight="bold" font-size="14" fill="white"
+                                text-anchor="middle">$</text>
+                        </g>
+                        <g class="anim-float" style="animation-delay: 0.4s;">
+                            <circle class="svg-accent" cx="130" cy="30" r="10" />
+                            <text x="130" y="34" font-family="sans-serif" font-weight="bold" font-size="10" fill="white"
+                                text-anchor="middle">$</text>
+                        </g>
+                        <g class="anim-float" style="animation-delay: 0.8s;">
+                            <circle class="svg-accent" cx="170" cy="70" r="12" />
+                            <text x="170" y="74" font-family="sans-serif" font-weight="bold" font-size="12" fill="white"
+                                text-anchor="middle">$</text>
+                        </g>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -233,8 +303,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <div class="logo-icon">☁️</div>
-                        <span>Cloud</span><span>epok</span>
+                        <span>Cloud<span style="color:var(--brand-primary)">epok</span></span>
                     </a>
                     <p>Cloud Engineering & Consulting. We transform businesses with intelligent, scalable systems across
                         Cloud, Data, and AI.</p>

@@ -128,8 +128,7 @@
     <header class="header" id="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">☁️</div>
-                <span>Cloud</span><span>epok</span>
+                <span>Cloud<span style="color:var(--brand-primary)">epok</span></span>
             </a>
 
             <nav class="nav">
@@ -178,7 +177,26 @@
                         <li>Progressive Web Apps (PWAs)</li>
                     </ul>
                 </div>
-                <div class="visual-box">💻</div>
+                <div class="visual-box">
+                    <svg class="svg-illustration anim-float" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Laptop Frame -->
+                        <rect class="svg-primary" fill-opacity="0.1" stroke="var(--brand-primary)" stroke-width="4"
+                            x="40" y="60" width="120" height="80" rx="6" />
+                        <path class="svg-primary" d="M20 140 h160 v10 a5 5 0 0 1 -5 5 h-150 a5 5 0 0 1 -5 -5 z" />
+                        <!-- Code Lines inside Screen -->
+                        <g class="anim-float" style="animation-delay: 0s;">
+                            <rect class="svg-secondary" x="50" y="75" width="40" height="4" rx="2" />
+                        </g>
+                        <g class="anim-float" style="animation-delay: 0.3s;">
+                            <rect class="svg-accent" x="50" y="85" width="80" height="4" rx="2" />
+                            <rect class="svg-primary" x="50" y="95" width="60" height="4" rx="2" />
+                        </g>
+                        <!-- Mobile device overlay -->
+                        <rect class="svg-primary" fill="var(--bg-primary)" stroke="var(--brand-primary)"
+                            stroke-width="3" x="130" y="80" width="30" height="50" rx="4" />
+                        <circle class="svg-accent anim-pulse" cx="145" cy="120" r="3" />
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -197,7 +215,24 @@
                         <li>API Gateways & Security Standard Implementation</li>
                     </ul>
                 </div>
-                <div class="visual-box">🔌</div>
+                <div class="visual-box">
+                    <svg class="svg-illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Central Hub -->
+                        <polygon class="svg-primary" fill-opacity="0.2" stroke="var(--brand-primary)" stroke-width="4"
+                            points="100,50 140,75 140,125 100,150 60,125 60,75" />
+                        <circle class="svg-primary anim-pulse" cx="100" cy="100" r="15" />
+                        <!-- Microservice Nodes -->
+                        <circle class="svg-secondary" cx="100" cy="20" r="10" />
+                        <circle class="svg-secondary" cx="170" cy="60" r="10" />
+                        <circle class="svg-secondary" cx="170" cy="140" r="10" />
+                        <circle class="svg-accent" cx="100" cy="180" r="10" />
+                        <circle class="svg-accent" cx="30" cy="140" r="10" />
+                        <circle class="svg-accent" cx="30" cy="60" r="10" />
+                        <!-- Connecting pulses -->
+                        <path class="svg-primary-stroke anim-spin" fill="none" stroke-width="2" stroke-dasharray="10 10"
+                            d="M100 30 v20 M160 65 l-20 10 M160 135 l-20 -10 M100 170 v-20 M40 135 l20 -10 M40 65 l20 10" />
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -216,7 +251,33 @@
                         <li>Performance & Security Audits</li>
                     </ul>
                 </div>
-                <div class="visual-box">⚡</div>
+                <div class="visual-box">
+                    <svg class="svg-illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Old monolithic system transforming -->
+                        <path class="svg-secondary" fill-opacity="0.2" stroke="var(--brand-secondary)" stroke-width="3"
+                            stroke-dasharray="6 4" d="M40 80 h50 v80 h-50 z" />
+
+                        <!-- Transform arrow -->
+                        <path class="svg-primary-stroke" fill="none" stroke-width="6" stroke-linecap="round"
+                            stroke-linejoin="round" d="M105 120 h20 l-10 -10 M125 120 l-10 10" />
+
+                        <!-- New modern modular system -->
+                        <g class="anim-float" style="animation-delay: 0s;">
+                            <rect class="svg-primary" x="140" y="70" width="30" height="25" rx="4" />
+                        </g>
+                        <g class="anim-float" style="animation-delay: 0.2s;">
+                            <rect class="svg-accent" x="140" y="105" width="20" height="25" rx="4" />
+                        </g>
+                        <g class="anim-float" style="animation-delay: 0.4s;">
+                            <rect class="svg-secondary" x="170" y="105" width="20" height="25" rx="4" />
+                        </g>
+                        <g class="anim-float" style="animation-delay: 0.6s;">
+                            <rect class="svg-primary" x="140" y="140" width="30" height="25" rx="4" />
+                        </g>
+                        <!-- Sparkles -->
+                        <path class="svg-accent anim-pulse" d="M160 40 l3 -8 8 -3 -8 -3 -3 -8 -3 8 -8 3 8 3 z" />
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -233,8 +294,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <div class="logo-icon">☁️</div>
-                        <span>Cloud</span><span>epok</span>
+                        <span>Cloud<span style="color:var(--brand-primary)">epok</span></span>
                     </a>
                     <p>Cloud Engineering & Consulting. We transform businesses with intelligent, scalable systems across
                         Cloud, Data, and AI.</p>

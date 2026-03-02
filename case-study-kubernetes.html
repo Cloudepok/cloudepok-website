@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: VMs to Kubernetes | Cloudepok</title>
+    <meta name="description"
+        content="Read how Cloudepok modernized a legacy e-commerce platform by migrating from VMs to Kubernetes, enabling unprecedented scalability and rapid deployments.">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%236366F1'/><stop offset='100%' stop-color='%2306B6D4'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><text x='50' y='68' font-size='50' fill='white' text-anchor='middle' font-family='sans-serif' font-weight='bold'>C</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Using the same layout styles as the first case study -->
+    <style>
+        .page-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--brand-primary);
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .cs-meta {
+            display: flex;
+            gap: 32px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .cs-meta-item strong {
+            display: block;
+            color: var(--text-primary);
+            font-size: 1.125rem;
+            margin-bottom: 4px;
+        }
+
+        .cs-meta-item span {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .cs-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+        }
+
+        .cs-main h2 {
+            font-size: 2rem;
+            margin-top: 48px;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .cs-main h2:first-child {
+            margin-top: 0;
+        }
+
+        .cs-main p,
+        .cs-main ul {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .cs-main ul {
+            padding-left: 20px;
+        }
+
+        .impact-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: 16px;
+            margin: 32px 0;
+        }
+
+        .impact-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: var(--bg-secondary);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+        }
+
+        .impact-list li::before {
+            content: '🚀';
+            font-size: 1.5rem;
+        }
+
+        .impact-content h4 {
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            font-size: 1.125rem;
+        }
+
+        .impact-content p {
+            margin: 0;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .cs-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .cs-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+
+        .cs-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 992px) {
+            .cs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cs-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo"><span>Cloud<span>epok</span></span></a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="index.html#features">Why Us</a></li>
+                    <li><a href="index.html#insights">Insights</a></li>
+                </ul>
+                <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container reveal">
+            <span class="hero-label">Infrastructure Modernization</span>
+            <h1>E-Commerce Platform: <br><span class="text-gradient">VMs to Kubernetes</span></h1>
+            <p>How a high-traffic e-commerce retailer escaped the limitations of localized virtual machines, achieving
+                infinite scalability and radically faster deployment cycles.</p>
+
+            <div class="cs-meta">
+                <div class="cs-meta-item">
+                    <span>Industry</span>
+                    <strong>Retail & E-Commerce</strong>
+                </div>
+                <div class="cs-meta-item">
+                    <span>Timeline</span>
+                    <strong>4 Months</strong>
+                </div>
+                <div class="cs-meta-item">
+                    <span>Cloud Provider</span>
+                    <strong>GCP (Google Cloud)</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="cs-grid">
+                <div class="cs-main reveal">
+                    <h2>The Challenge</h2>
+                    <p>During flash sales and holiday peaks, the client's infrastructure—hosted on monolithic,
+                        statically-provisioned Virtual Machines—regularly buckled under load. Provisioning new VMs took
+                        hours, meaning they had to heavily over-provision infrastructure just 'in case', leading to
+                        massive cloud waste during normal operations.</p>
+                    <p>Furthermore, their development teams were stepping on each other's toes. Deployments were a
+                        chaotic, manual process requiring massive orchestration between development and ops, resulting
+                        in infrequent, high-risk releases.</p>
+
+                    <h2>The Solution Architecture</h2>
+                    <p>We guided the client through a complete architectural transformation utilizing Google Kubernetes
+                        Engine (GKE).</p>
+
+                    <ul>
+                        <li><strong>Strangler Fig Containerization:</strong> We didn't rewrite the application from
+                            scratch. Instead, we extracted high-traffic domains (like the product catalog, checkout
+                            cart, and search) into their own lightweight Docker containers.</li>
+                        <li><strong>Kubernetes Orchestration:</strong> We deployed these containers to a managed GKE
+                            cluster. We implemented Horizontal Pod Autoscaling (HPA) so that during traffic spikes, new
+                            identical microservices spin up in seconds, not hours.</li>
+                        <li><strong>Service Mesh:</strong> We introduced Istio to handle complex routing, mTLS security
+                            between services, and blue/green deployments without application-level logic changes.</li>
+                        <li><strong>GitOps Workflows:</strong> We implemented ArgoCD so that infrastructure and
+                            application states are declared in Git repositories, automating the deployment sync process
+                            entirely.</li>
+                    </ul>
+
+                    <h2>The Business Impact</h2>
+                    <p>The modernization shifted their IT posture from a fragile bottleneck to a robust revenue enabler.
+                    </p>
+
+                    <ul class="impact-list">
+                        <li>
+                            <div class="impact-content">
+                                <h4>True Elasticity</h4>
+                                <p>On Black Friday, the infrastructure automatically scaled up by 800% in minutes to
+                                    handle traffic without a single dropped transaction, then scaled back down
+                                    immediately to save costs.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="impact-content">
+                                <h4>30% Compute Cost Reduction</h4>
+                                <p>By eliminating the need to have idle, over-provisioned VMs running 24/7, base
+                                    infrastructure costs dropped significantly.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="impact-content">
+                                <h4>5x Faster Deployment Velocity</h4>
+                                <p>Engineers can now push code multiple times a day independently, knowing that
+                                    Kubernetes and ArgoCD handle the secure rollout and automated rollback mechanisms.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="cs-sidebar reveal">
+                    <div class="cs-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">GCP</span>
+                            <span class="tech-tag">Google Kubernetes Engine (GKE)</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Istio Service Mesh</span>
+                            <span class="tech-tag">ArgoCD</span>
+                            <span class="tech-tag">Helm</span>
+                        </div>
+                    </div>
+
+                    <div class="cs-card" style="background: var(--bg-primary); text-align: center;">
+                        <h3 style="border: none; margin-bottom: 8px;">Break free from VMs</h3>
+                        <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: 24px;">Let us help you
+                            containerize your workflows for modern scale.</p>
+                        <a href="index.html#contact" class="btn btn-primary" style="width: 100%;">Schedule a
+                            Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 Cloudepok. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); });
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        menuToggle.addEventListener('click', () => { mobileNav.classList.toggle('active'); menuToggle.classList.toggle('active'); });
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); revealObserver.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+
+</html>

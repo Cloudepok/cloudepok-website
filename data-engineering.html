@@ -131,8 +131,7 @@
     <header class="header" id="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">☁️</div>
-                <span>Cloud</span><span>epok</span>
+                <span>Cloud<span style="color:var(--brand-primary)">epok</span></span>
             </a>
 
             <nav class="nav">
@@ -184,7 +183,20 @@
                         <li>Data Quality & Governance Tools</li>
                     </ul>
                 </div>
-                <div class="visual-box">🔄</div>
+                <div class="visual-box">
+                    <svg class="svg-illustration anim-float" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Pipeline paths -->
+                        <path class="svg-primary-stroke" stroke-width="6" fill="none"
+                            d="M20 100 h40 l20 -40 h40 l20 40 h40" stroke-linecap="round" />
+                        <path class="svg-secondary-stroke" stroke-width="4" fill="none"
+                            d="M20 120 h50 l20 30 h40 l20 -30 h30" stroke-dasharray="10 5" stroke-linecap="round" />
+                        <!-- Data nodes -->
+                        <circle class="svg-accent anim-pulse" cx="80" cy="60" r="8" />
+                        <circle class="svg-primary anim-pulse" cx="120" cy="60" r="8" style="animation-delay: 0.5s;" />
+                        <circle class="svg-accent anim-pulse" cx="90" cy="150" r="6" style="animation-delay: 1s;" />
+                        <circle class="svg-primary anim-pulse" cx="130" cy="150" r="6" style="animation-delay: 1.5s;" />
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -204,7 +216,25 @@
                         <li>Secure Data Governance & Access Control</li>
                     </ul>
                 </div>
-                <div class="visual-box">🗄️</div>
+                <div class="visual-box">
+                    <svg class="svg-illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Database Cylinders -->
+                        <g class="anim-float" style="animation-delay: 0s;">
+                            <ellipse class="svg-secondary" cx="100" cy="140" rx="50" ry="15" />
+                            <path class="svg-secondary" fill-opacity="0.8" d="M50 140 v30 a50 15 0 0 0 100 0 v-30 z" />
+                        </g>
+                        <g class="anim-float" style="animation-delay: 0.3s;">
+                            <ellipse class="svg-primary" cx="100" cy="110" rx="50" ry="15" />
+                            <path class="svg-primary" fill-opacity="0.9" d="M50 110 v30 a50 15 0 0 0 100 0 v-30 z" />
+                        </g>
+                        <g class="anim-float" style="animation-delay: 0.6s;">
+                            <ellipse class="svg-accent" cx="100" cy="80" rx="50" ry="15" />
+                            <path class="svg-primary" fill-opacity="1" d="M50 80 v30 a50 15 0 0 0 100 0 v-30 z" />
+                        </g>
+                        <!-- Data Particles -->
+                        <circle class="svg-accent anim-pulse" cx="100" cy="40" r="10" />
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -224,7 +254,21 @@
                         <li>Predictive Analytics Integration</li>
                     </ul>
                 </div>
-                <div class="visual-box">📈</div>
+                <div class="visual-box">
+                    <svg class="svg-illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Chart Bars with staggered growth animation -->
+                        <rect class="svg-secondary" x="40" y="140" width="20" height="40" rx="4" />
+                        <rect class="svg-primary" fill-opacity="0.7" x="80" y="100" width="20" height="80" rx="4" />
+                        <rect class="svg-primary" fill-opacity="0.9" x="120" y="60" width="20" height="120" rx="4" />
+                        <rect class="svg-accent" x="160" y="30" width="20" height="150" rx="4" />
+
+                        <!-- Trend Line -->
+                        <path class="svg-accent-stroke" fill="none" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" d="M50 130 L90 90 L130 40 L170 10" />
+                        <!-- Moving Data Point -->
+                        <circle class="svg-primary anim-pulse" cx="170" cy="10" r="6" />
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -243,8 +287,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <div class="logo-icon">☁️</div>
-                        <span>Cloud</span><span>epok</span>
+                        <span>Cloud<span style="color:var(--brand-primary)">epok</span></span>
                     </a>
                     <p>Cloud Engineering & Consulting. We transform businesses with intelligent, scalable systems across
                         Cloud, Data, and AI.</p>

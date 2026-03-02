@@ -39,9 +39,8 @@
   <!-- Header -->
   <header class="header" id="header">
     <div class="container">
-      <a href="#" class="logo">
-        <div class="logo-icon">☁️</div>
-        <span>Cloud</span><span>epok</span>
+      <a href="index.html" class="logo">
+        <span>Cloud<span style="color:var(--brand-primary)">epok</span></span>
       </a>
 
       <nav class="nav">
@@ -152,7 +151,14 @@
           <a href="cloud-engineering.html" class="btn btn-secondary" style="margin-top: 24px;">Learn Mode</a>
         </div>
         <div class="service-visual">
-          <div class="service-icon-large">☁️</div>
+          <svg class="svg-illustration anim-float" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path class="svg-secondary" fill-opacity="0.2"
+              d="M140 100c0-22-18-40-40-40-2-12-13-20-25-20-17 0-30 13-30 30 0 1-1 1-1 2-15 4-24 19-19 34 5 15 19 24 35 24h80c11 0 20-9 20-20s-9-20-20-20z" />
+            <path class="svg-primary" d="M100 130l-20-20h15V80h10v30h15l-20 20z" transform="rotate(180 100 105)" />
+            <circle class="svg-accent anim-pulse" cx="100" cy="50" r="8" />
+            <circle class="svg-primary anim-pulse" cx="150" cy="80" r="5" style="animation-delay: 0.5s;" />
+            <circle class="svg-secondary anim-pulse" cx="50" cy="110" r="10" style="animation-delay: 1s;" />
+          </svg>
         </div>
       </div>
 
@@ -173,7 +179,17 @@
           <a href="data-engineering.html" class="btn btn-secondary" style="margin-top: 24px;">Learn More</a>
         </div>
         <div class="service-visual">
-          <div class="service-icon-large">📊</div>
+          <svg class="svg-illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Chart Bars with staggered growth animation -->
+            <rect class="svg-secondary" x="40" y="140" width="20" height="40" rx="4" />
+            <rect class="svg-primary" fill-opacity="0.7" x="80" y="100" width="20" height="80" rx="4" />
+            <rect class="svg-primary" fill-opacity="0.9" x="120" y="60" width="20" height="120" rx="4" />
+            <rect class="svg-accent" x="160" y="30" width="20" height="150" rx="4" />
+            <!-- Trend Line -->
+            <path class="svg-accent-stroke" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+              d="M50 130 L90 90 L130 40 L170 10" />
+            <circle class="svg-primary anim-pulse" cx="170" cy="10" r="6" />
+          </svg>
         </div>
       </div>
 
@@ -194,7 +210,25 @@
           <a href="ml-engineering.html" class="btn btn-secondary" style="margin-top: 24px;">Learn More</a>
         </div>
         <div class="service-visual">
-          <div class="service-icon-large">🤖</div>
+          <svg class="svg-illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path class="svg-primary" fill-opacity="0.1" stroke="var(--brand-primary)" stroke-width="3"
+              d="M100 40 C140 40 160 70 160 110 C160 150 130 170 100 170 C70 170 40 150 40 110 C40 70 60 40 100 40 Z" />
+            <g class="anim-pulse" style="animation-delay: 0s;">
+              <circle class="svg-accent" cx="80" cy="80" r="5" />
+              <circle class="svg-secondary" cx="120" cy="80" r="5" />
+            </g>
+            <g class="anim-pulse" style="animation-delay: 0.5s;">
+              <circle class="svg-secondary" cx="70" cy="110" r="5" />
+              <circle class="svg-primary" cx="130" cy="110" r="5" />
+            </g>
+            <g class="anim-pulse" style="animation-delay: 1s;">
+              <circle class="svg-primary" cx="80" cy="140" r="5" />
+              <circle class="svg-accent" cx="120" cy="140" r="5" />
+            </g>
+            <circle class="svg-accent" cx="100" cy="110" r="8" />
+            <path class="svg-primary-stroke anim-spin" fill="none" stroke-width="2" stroke-dasharray="5 5"
+              d="M80 80 L100 110 L120 80 M70 110 L100 110 L130 110 M80 140 L100 110 L120 140" />
+          </svg>
         </div>
       </div>
 
@@ -215,7 +249,24 @@
           <a href="managed-services.html" class="btn btn-secondary" style="margin-top: 24px;">Learn More</a>
         </div>
         <div class="service-visual">
-          <div class="service-icon-large">🛡️</div>
+          <svg class="svg-illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <!-- Shield Background -->
+            <path class="svg-primary" fill-opacity="0.1" stroke="var(--brand-primary)" stroke-width="4"
+              d="M100 20 L160 50 V100 C160 140 100 180 100 180 C100 180 40 140 40 100 V50 Z" />
+            <!-- Inner Operations Radar -->
+            <circle class="svg-secondary-stroke" fill="none" stroke-width="2" cx="100" cy="95" r="40" />
+            <circle class="svg-secondary-stroke" fill="none" stroke-width="1" cx="100" cy="95" r="20"
+              stroke-dasharray="4 4" />
+            <!-- Radar Sweep -->
+            <g class="anim-spin" style="transform-origin: 100px 95px;">
+              <path class="svg-accent" fill-opacity="0.3" d="M100 95 L140 95 A40 40 0 0 0 100 55 Z" />
+              <line stroke="var(--brand-accent)" stroke-width="2" x1="100" y1="95" x2="100" y2="55" />
+            </g>
+            <!-- Status Dots -->
+            <circle class="svg-primary anim-pulse" cx="120" cy="75" r="4" />
+            <circle class="svg-accent anim-pulse" cx="75" cy="115" r="4" style="animation-delay: 0.5s;" />
+            <circle class="svg-secondary anim-pulse" cx="115" cy="120" r="4" style="animation-delay: 1s;" />
+          </svg>
         </div>
       </div>
     </div>
@@ -303,55 +354,7 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials section" id="testimonials">
-    <div class="container">
-      <div class="section-header reveal">
-        <h2>What Our <span class="text-gradient">Clients Say</span></h2>
-        <p>Don't just take our word for it. Here's what leaders say about working with Cloudepok.</p>
-      </div>
 
-      <div class="testimonials-grid">
-        <div class="testimonial-card reveal">
-          <p class="testimonial-text">"Cloudepok transformed our data infrastructure completely. Their MLOps expertise
-            helped us deploy models 5x faster than before. The team's deep knowledge of GCP and Kubernetes was exactly
-            what we needed."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">RS</div>
-            <div class="author-info">
-              <strong>Rahul Sharma</strong>
-              <span>CTO, TechScale Inc.</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card reveal">
-          <p class="testimonial-text">"We were struggling with cloud costs and legacy systems. Cloudepok helped us
-            modernize our stack and reduced our cloud spend by 45%. Their engineers are world-class."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">PM</div>
-            <div class="author-info">
-              <strong>Priya Mehta</strong>
-              <span>VP Engineering, DataFlow Systems</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card reveal">
-          <p class="testimonial-text">"The GenAI solution Cloudepok built for us has become central to our product.
-            Their ability to go from concept to production in weeks was impressive. Highly recommend for AI projects."
-          </p>
-          <div class="testimonial-author">
-            <div class="author-avatar">AK</div>
-            <div class="author-info">
-              <strong>Amit Kumar</strong>
-              <span>CEO, InnovateLabs</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Blog/Insights Section -->
   <section class="section" id="insights">
@@ -372,6 +375,8 @@
             <h3>Building Production-Ready RAG Systems: A Complete Guide</h3>
             <p>Learn how to architect and deploy RAG systems that scale, with lessons from real-world implementations.
             </p>
+            <a href="index.html#insights" class="btn btn-secondary"
+              style="margin-top: 16px; font-size: 0.8rem; padding: 8px 16px;">Coming Soon</a>
           </div>
         </article>
 
@@ -385,6 +390,8 @@
             <h3>Kubernetes Cost Optimization: 7 Strategies That Actually Work</h3>
             <p>Practical strategies to reduce your Kubernetes costs by 40% without sacrificing performance or
               reliability.</p>
+            <a href="index.html#insights" class="btn btn-secondary"
+              style="margin-top: 16px; font-size: 0.8rem; padding: 8px 16px;">Coming Soon</a>
           </div>
         </article>
 
@@ -397,6 +404,8 @@
             </div>
             <h3>Modern Data Stack in 2026: What's Changed and What Hasn't</h3>
             <p>A comprehensive look at the evolving data landscape and how to build data platforms that last.</p>
+            <a href="index.html#insights" class="btn btn-secondary"
+              style="margin-top: 16px; font-size: 0.8rem; padding: 8px 16px;">Coming Soon</a>
           </div>
         </article>
       </div>
@@ -412,32 +421,34 @@
           outcomes.</p>
 
         <div class="contact-form-section">
-          <form class="contact-form" id="contactForm" action="https://formspree.io/f/mkovwzjo" method="POST">
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/mkovwzjo" method="POST"
+            style="position: relative; z-index: 10;">
             <input type="hidden" name="_subject" value="New Cloudepok Contact Form Submission">
 
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" required>
+                <input type="text" id="name" name="name" placeholder="Your name" required style="pointer-events: auto;">
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                <input type="email" id="email" name="email" placeholder="you@company.com" required
+                  style="pointer-events: auto;">
               </div>
             </div>
 
             <div class="form-group full">
               <label for="company">Company</label>
-              <input type="text" id="company" name="company" placeholder="Your company">
+              <input type="text" id="company" name="company" placeholder="Your company" style="pointer-events: auto;">
             </div>
 
             <div class="form-group full">
               <label for="message">How can we help?</label>
-              <textarea id="message" name="message" placeholder="Tell us about your project or challenge..."
-                required></textarea>
+              <textarea id="message" name="message" placeholder="Tell us about your project or challenge..." required
+                style="pointer-events: auto;"></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" id="submitBtn">
+            <button type="submit" class="btn btn-primary" id="submitBtn" style="pointer-events: auto;">
               <span class="btn-text">Send Message</span>
               <span class="btn-loading" hidden>Sending...</span>
               <span class="btn-icon">→</span>
@@ -459,9 +470,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo">
-            <div class="logo-icon">☁️</div>
-            <span>Cloud</span><span>epok</span>
+          <a href="index.html" class="logo">
+            <span>Cloud<span style="color:var(--brand-primary)">epok</span></span>
           </a>
           <p>Cloud Engineering & Consulting. We transform businesses with intelligent, scalable systems across Cloud,
             Data, and AI.</p>

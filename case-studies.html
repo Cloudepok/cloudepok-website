@@ -137,8 +137,7 @@
     <header class="header" id="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">☁️</div>
-                <span>Cloud</span><span>epok</span>
+                <span>Cloud<span style="color:var(--brand-primary)">epok</span></span>
             </a>
 
             <nav class="nav">
@@ -179,14 +178,27 @@
 
                 <!-- Case Study 1 -->
                 <article class="case-card reveal">
-                    <div class="case-visual">🏢 ➔ ☁️</div>
+                    <div class="case-visual">
+                        <svg class="svg-illustration anim-float" viewBox="0 0 200 200"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <!-- Basic Cloud Migration Representation -->
+                            <rect class="svg-secondary" fill-opacity="0.3" x="40" y="100" width="40" height="60"
+                                rx="4" />
+                            <path class="svg-primary-stroke" fill="none" stroke-width="4" stroke-linecap="round"
+                                stroke-dasharray="10 5" d="M60 90 Q100 20 140 80" />
+                            <path class="svg-primary" fill-opacity="0.2"
+                                d="M140 100c0-22-18-40-40-40-2-12-13-20-25-20-17 0-30 13-30 30 0 1-1 1-1 2-15 4-24 19-19 34 5 15 19 24 35 24h80c11 0 20-9 20-20s-9-20-20-20z" />
+                        </svg>
+                    </div>
                     <div class="case-content">
                         <div class="case-tags">
                             <span class="tag">Cloud Migration</span>
                             <span class="tag">AWS</span>
                             <span class="tag">GCP</span>
                         </div>
-                        <h2>Enterprise On-Prem to Multi-Cloud Migration</h2>
+                        <h2><a href="case-study-cloud-migration.html"
+                                style="color:inherit; text-decoration:none;">Enterprise On-Prem to Multi-Cloud Migration
+                                &rarr;</a></h2>
                         <p>A leading financial services firm struggled with an aging on-premise data center. Cloudepok
                             executed a seamless zero-downtime migration, transitioning their monolithic systems into a
                             resilient Multi-Cloud architecture across AWS and GCP.</p>
@@ -200,14 +212,25 @@
 
                 <!-- Case Study 2 -->
                 <article class="case-card reveal">
-                    <div class="case-visual">🖥️ ➔ ☸️</div>
+                    <div class="case-visual">
+                        <svg class="svg-illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- K8s Wheel / Modules -->
+                            <rect class="svg-secondary" x="60" y="60" width="30" height="30" rx="4" />
+                            <rect class="svg-primary" x="110" y="60" width="30" height="30" rx="4" />
+                            <rect class="svg-accent" x="60" y="110" width="30" height="30" rx="4" />
+                            <rect class="svg-secondary" x="110" y="110" width="30" height="30" rx="4" />
+                            <circle class="svg-primary-stroke anim-spin" fill="none" stroke-width="4"
+                                stroke-dasharray="20 10" cx="100" cy="100" r="60" />
+                        </svg>
+                    </div>
                     <div class="case-content">
                         <div class="case-tags">
                             <span class="tag">Infra Modernization</span>
                             <span class="tag">Kubernetes</span>
                             <span class="tag">GKE</span>
                         </div>
-                        <h2>VMs to Kubernetes: Accelerating Deployment Cycles</h2>
+                        <h2><a href="case-study-kubernetes.html" style="color:inherit; text-decoration:none;">VMs to
+                                Kubernetes: Accelerating Deployment Cycles &rarr;</a></h2>
                         <p>An e-commerce platform experienced scaling bottlenecks during peak events with their legacy
                             VM infrastructure. We modernized their stack by containerizing over 50 microservices and
                             orchestrating them via Google Kubernetes Engine (GKE) and Amazon EKS.</p>
@@ -221,14 +244,27 @@
 
                 <!-- Case Study 3 -->
                 <article class="case-card reveal">
-                    <div class="case-visual">📊 ➔ 🧠</div>
+                    <div class="case-visual">
+                        <svg class="svg-illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Data to ML abstraction -->
+                            <ellipse class="svg-primary" fill-opacity="0.8" cx="60" cy="100" rx="30" ry="10" />
+                            <ellipse class="svg-primary" fill-opacity="0.5" cx="60" cy="80" rx="30" ry="10" />
+                            <path class="svg-accent-stroke anim-pulse" fill="none" stroke-width="4"
+                                stroke-linecap="round" d="M100 90 L130 90 M120 80 L130 90 L120 100" />
+                            <circle class="svg-accent" fill-opacity="0.2" stroke="var(--brand-accent)" stroke-width="4"
+                                cx="160" cy="90" r="20" />
+                            <circle class="svg-secondary anim-pulse" cx="160" cy="90" r="5"
+                                style="animation-delay: 1s;" />
+                        </svg>
+                    </div>
                     <div class="case-content">
                         <div class="case-tags">
                             <span class="tag">Data Engineering</span>
                             <span class="tag">MLOps</span>
                             <span class="tag">GenAI</span>
                         </div>
-                        <h2>Building an Enterprise Data Lake & AI Pipeline</h2>
+                        <h2><a href="case-study-data-ml.html" style="color:inherit; text-decoration:none;">Building an
+                                Enterprise Data Lake & AI Pipeline &rarr;</a></h2>
                         <p>A healthcare provider needed to consolidate fragmented patient data to run predictive models.
                             We architected a scalable Data Lakehouse and integrated an automated MLOps pipeline,
                             eventually deploying a custom GenAI assistant to aid data retrieval.</p>
@@ -256,8 +292,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <div class="logo-icon">☁️</div>
-                        <span>Cloud</span><span>epok</span>
+                        <span>Cloud<span style="color:var(--brand-primary)">epok</span></span>
                     </a>
                     <p>Cloud Engineering & Consulting. We transform businesses with intelligent, scalable systems across
                         Cloud, Data, and AI.</p>

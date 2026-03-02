@@ -8,29 +8,29 @@
    ---------------------------------------- */
 :root {
   /* Background Palette */
-  --bg-primary: #040D21;
-  --bg-secondary: #0B1736;
-  --bg-tertiary: #132247;
-  --bg-card: rgba(11, 23, 54, 0.8);
-  --bg-glass: rgba(249, 115, 22, 0.05);
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --bg-tertiary: #F1F5F9;
+  --bg-card: #FFFFFF;
+  --bg-glass: rgba(255, 255, 255, 0.7);
 
   /* Brand Colors */
   --brand-primary: #2563EB;
   --brand-secondary: #8B5CF6;
   --brand-accent: #F97316;
-  --brand-glow: rgba(249, 115, 22, 0.4);
+  --brand-glow: rgba(37, 99, 235, 0.2);
 
   /* Gradient Presets */
   --gradient-brand: linear-gradient(135deg, #2563EB 0%, #8B5CF6 50%, #F97316 100%);
-  --gradient-hero: linear-gradient(180deg, #040D21 0%, #0B1736 50%, #132247 100%);
-  --gradient-card: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(249, 115, 22, 0.05) 100%);
-  --gradient-text: linear-gradient(90deg, #60A5FA, #A78BFA, #FDBA74);
+  --gradient-hero: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+  --gradient-card: linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%);
+  --gradient-text: linear-gradient(90deg, #1E40AF, #6D28D9, #C2410C);
 
   /* Text Colors */
-  --text-primary: #FFFFFF;
-  --text-secondary: #E2E8F0;
-  --text-muted: #94A3B8;
-  --text-subtle: #64748B;
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --text-subtle: #94A3B8;
 
   /* Border & Effects */
   --border-color: rgba(99, 102, 241, 0.2);
@@ -248,7 +248,7 @@ h4 {
 }
 
 .header.scrolled {
-  background: rgba(10, 10, 26, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-color);
@@ -261,32 +261,48 @@ h4 {
 }
 
 .logo {
-  font-size: 1.75rem;
+  font-size: 1.875rem;
+  /* Slightly larger base */
   font-weight: 800;
+  /* Extra bold for structure */
   display: flex;
   align-items: center;
-  gap: 8px;
+  letter-spacing: -0.03em;
+  /* Tighter tracking for wordmark feel */
+  text-decoration: none;
 }
 
-.logo-icon {
-  width: 40px;
-  height: 40px;
-  background: var(--gradient-brand);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
+/* Base "Cloud" styling */
+.logo span {
+  display: inline-block;
+  line-height: 1;
 }
 
+/* First part "Cloud" */
 .logo span:first-of-type {
   color: var(--text-primary);
+  font-weight: 800;
 }
 
-.logo span:last-of-type {
-  background: var(--gradient-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Second part "epok" */
+.logo span>span {
+  color: var(--brand-primary);
+  font-weight: 700;
+  /* Slightly lighter weight than Cloud */
+  position: relative;
+}
+
+/* Add a subtle underline decoration to the "epok" part to lock the mark */
+.logo span>span::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gradient-brand);
+  border-radius: 2px;
+  opacity: 0.8;
 }
 
 .nav {
@@ -418,11 +434,11 @@ h4 {
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: var(--bg-glass);
-  border: 1px solid var(--border-color);
+  background: rgba(37, 99, 235, 0.05);
+  border: 1px solid rgba(37, 99, 235, 0.2);
   border-radius: 999px;
   font-size: 0.875rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   margin-bottom: 24px;
   animation: fadeInUp 0.8s ease forwards;
 }
@@ -610,6 +626,116 @@ h4 {
 }
 
 /* ----------------------------------------
+   SVG Illustrations
+   ---------------------------------------- */
+.svg-illustration {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Floating animation */
+@keyframes floatAnim {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Pulse animation */
+@keyframes pulseAnim {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+}
+
+/* Spin animation */
+@keyframes spinAnim {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Dash animation for paths */
+@keyframes dashAnim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.anim-float {
+  animation: floatAnim 4s ease-in-out infinite;
+}
+
+.anim-pulse {
+  animation: pulseAnim 3s ease-in-out infinite;
+}
+
+.anim-spin {
+  animation: spinAnim 12s linear infinite;
+  transform-origin: center;
+}
+
+.anim-spin-reverse {
+  animation: spinAnim 15s linear infinite reverse;
+  transform-origin: center;
+}
+
+/* SVG Colors mapped to theme variables */
+.svg-primary {
+  fill: var(--brand-primary);
+}
+
+.svg-primary-stroke {
+  stroke: var(--brand-primary);
+}
+
+.svg-secondary {
+  fill: var(--brand-secondary);
+}
+
+.svg-secondary-stroke {
+  stroke: var(--brand-secondary);
+}
+
+.svg-accent {
+  fill: var(--brand-accent);
+}
+
+.svg-accent-stroke {
+  stroke: var(--brand-accent);
+}
+
+.svg-gradient {
+  fill: url(#brandGradient);
+}
+
+/* ----------------------------------------
    Features Grid
    ---------------------------------------- */
 .features-grid {
@@ -619,13 +745,14 @@ h4 {
 }
 
 .feature-card {
-  background: var(--bg-card);
+  background: #FFFFFF;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 32px;
   transition: var(--transition-base);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .feature-card::before {
@@ -688,10 +815,11 @@ h4 {
 .stat-card {
   text-align: center;
   padding: 40px 24px;
-  background: var(--bg-card);
+  background: #FFFFFF;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   transition: var(--transition-base);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .stat-card:hover {
@@ -722,11 +850,12 @@ h4 {
 }
 
 .testimonial-card {
-  background: var(--bg-card);
+  background: #FFFFFF;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   padding: 32px;
   position: relative;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .testimonial-card::before {
@@ -849,31 +978,27 @@ h4 {
 }
 
 .cta-box {
-  background: var(--gradient-card);
+  background: #1E293B;
+  /* Dark box for contrast on light theme */
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-xl);
   padding: 80px 40px;
   position: relative;
   overflow: hidden;
-}
-
-.cta-box::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.2) 0%, transparent 50%);
+  color: #FFFFFF;
 }
 
 .cta-box h2 {
   position: relative;
   z-index: 1;
   margin-bottom: 16px;
+  color: #FFFFFF;
 }
 
 .cta-box p {
   position: relative;
   z-index: 1;
-  color: var(--text-muted);
+  color: #94A3B8;
   max-width: 500px;
   margin: 0 auto 32px;
   font-size: 1.125rem;
@@ -920,7 +1045,7 @@ h4 {
 .form-group input,
 .form-group textarea {
   padding: 14px 18px;
-  background: var(--bg-tertiary);
+  background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   color: var(--text-primary);
@@ -976,7 +1101,7 @@ h4 {
 .social-link {
   width: 40px;
   height: 40px;
-  background: var(--bg-tertiary);
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 10px;
   display: flex;

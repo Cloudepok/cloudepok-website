@@ -129,8 +129,7 @@
     <header class="header" id="header">
         <div class="container">
             <a href="index.html" class="logo">
-                <div class="logo-icon">☁️</div>
-                <span>Cloud</span><span>epok</span>
+                <span>Cloud<span style="color:var(--brand-primary)">epok</span></span>
             </a>
 
             <nav class="nav">
@@ -179,7 +178,30 @@
                         <li>GenAI API Integration (OpenAI, Anthropic, Gemini)</li>
                     </ul>
                 </div>
-                <div class="visual-box">🧠</div>
+                <div class="visual-box">
+                    <svg class="svg-illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Head/Brain abstraction -->
+                        <path class="svg-primary" fill-opacity="0.1" stroke="var(--brand-primary)" stroke-width="3"
+                            d="M100 40 C140 40 160 70 160 110 C160 150 130 170 100 170 C70 170 40 150 40 110 C40 70 60 40 100 40 Z" />
+                        <!-- Neural Network Nodes -->
+                        <g class="anim-pulse" style="animation-delay: 0s;">
+                            <circle class="svg-accent" cx="80" cy="80" r="5" />
+                            <circle class="svg-secondary" cx="120" cy="80" r="5" />
+                        </g>
+                        <g class="anim-pulse" style="animation-delay: 0.5s;">
+                            <circle class="svg-secondary" cx="70" cy="110" r="5" />
+                            <circle class="svg-primary" cx="130" cy="110" r="5" />
+                        </g>
+                        <g class="anim-pulse" style="animation-delay: 1s;">
+                            <circle class="svg-primary" cx="80" cy="140" r="5" />
+                            <circle class="svg-accent" cx="120" cy="140" r="5" />
+                        </g>
+                        <circle class="svg-accent" cx="100" cy="110" r="8" />
+                        <!-- Synaptic Connections -->
+                        <path class="svg-primary-stroke anim-spin" fill="none" stroke-width="2" stroke-dasharray="5 5"
+                            d="M80 80 L100 110 L120 80 M70 110 L100 110 L130 110 M80 140 L100 110 L120 140" />
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -198,7 +220,29 @@
                         <li>Anomaly Detection Systems</li>
                     </ul>
                 </div>
-                <div class="visual-box">🔮</div>
+                <div class="visual-box">
+                    <svg class="svg-illustration anim-float" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Glowing Orb (Crystal Ball) -->
+                        <circle class="svg-primary" fill-opacity="0.1" stroke="var(--brand-primary)" stroke-width="4"
+                            cx="100" cy="90" r="50" />
+                        <circle class="svg-secondary" fill-opacity="0.2" cx="100" cy="90" r="40" />
+                        <!-- Inner Magic -->
+                        <path class="svg-accent" fill-opacity="0.5" d="M80 90 Q100 60 120 90 T80 90 Z" />
+                        <circle class="svg-primary anim-pulse" cx="100" cy="90" r="10" />
+
+                        <!-- Stand -->
+                        <path class="svg-primary" d="M80 145 h40 l10 20 h-60 z" />
+                        <rect class="svg-secondary" x="60" y="165" width="80" height="10" rx="3" />
+
+                        <!-- Prediction Stars -->
+                        <g class="anim-pulse" style="animation-delay: 0s;">
+                            <path class="svg-accent" d="M40 50 l3 -8 8 -3 -8 -3 -3 -8 -3 8 -8 3 8 3 z" />
+                        </g>
+                        <g class="anim-pulse" style="animation-delay: 0.7s;">
+                            <path class="svg-accent" d="M160 30 l2 -5 5 -2 -5 -2 -2 -5 -2 5 -5 2 5 2 z" />
+                        </g>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -217,7 +261,33 @@
                         <li>Model Monitoring & Data Drift Detection</li>
                     </ul>
                 </div>
-                <div class="visual-box">🤖</div>
+                <div class="visual-box">
+                    <svg class="svg-illustration" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Robot / AI Agent Block -->
+                        <rect class="svg-secondary" fill-opacity="0.1" stroke="var(--brand-secondary)" stroke-width="4"
+                            x="60" y="50" width="80" height="70" rx="10" />
+                        <!-- Eyes -->
+                        <rect class="svg-primary anim-pulse" x="75" y="70" width="15" height="10" rx="4" />
+                        <rect class="svg-primary anim-pulse" x="110" y="70" width="15" height="10" rx="4" />
+                        <!-- Mouth (Voice wave) -->
+                        <path class="svg-accent-stroke" fill="none" stroke-width="3" stroke-linecap="round"
+                            d="M80 100 q10 -5 20 0 t20 0" />
+
+                        <!-- Antenna -->
+                        <line class="svg-secondary-stroke" stroke-width="4" x1="100" y1="50" x2="100" y2="20" />
+                        <circle class="svg-accent anim-pulse" cx="100" cy="20" r="6" />
+
+                        <!-- Processing Gears/Nodes below -->
+                        <g class="anim-spin" style="transform-origin: 80px 140px;">
+                            <circle class="svg-primary-stroke" fill="none" stroke-width="3" stroke-dasharray="10 5"
+                                cx="80" cy="140" r="15" />
+                        </g>
+                        <g class="anim-spin-reverse" style="transform-origin: 120px 140px;">
+                            <circle class="svg-secondary-stroke" fill="none" stroke-width="3" stroke-dasharray="8 4"
+                                cx="120" cy="140" r="12" />
+                        </g>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -234,8 +304,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
-                        <div class="logo-icon">☁️</div>
-                        <span>Cloud</span><span>epok</span>
+                        <span>Cloud<span style="color:var(--brand-primary)">epok</span></span>
                     </a>
                     <p>Cloud Engineering & Consulting. We transform businesses with intelligent, scalable systems across
                         Cloud, Data, and AI.</p>

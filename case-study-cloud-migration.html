@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Cloud Migration | Cloudepok</title>
+    <meta name="description"
+        content="Read how Cloudepok transformed a legacy on-premises infrastructure into a highly scalable, secure, and cost-efficient cloud environment.">
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%236366F1'/><stop offset='100%' stop-color='%2306B6D4'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><text x='50' y='68' font-size='50' fill='white' text-anchor='middle' font-family='sans-serif' font-weight='bold'>C</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--brand-primary);
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .cs-meta {
+            display: flex;
+            gap: 32px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .cs-meta-item strong {
+            display: block;
+            color: var(--text-primary);
+            font-size: 1.125rem;
+            margin-bottom: 4px;
+        }
+
+        .cs-meta-item span {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .cs-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+        }
+
+        .cs-main h2 {
+            font-size: 2rem;
+            margin-top: 48px;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .cs-main h2:first-child {
+            margin-top: 0;
+        }
+
+        .cs-main p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .impact-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: 16px;
+            margin: 32px 0;
+        }
+
+        .impact-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            background: var(--bg-secondary);
+            padding: 24px;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+        }
+
+        .impact-list li::before {
+            content: '🚀';
+            font-size: 1.5rem;
+        }
+
+        .impact-content h4 {
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            font-size: 1.125rem;
+        }
+
+        .impact-content p {
+            margin: 0;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .cs-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .cs-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            padding: 32px;
+            margin-bottom: 32px;
+        }
+
+        .cs-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 992px) {
+            .cs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cs-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span>Cloud<span>epok</span></span>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="index.html#features">Why Us</a></li>
+                    <li><a href="index.html#insights">Insights</a></li>
+                </ul>
+                <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html#services">Services</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="index.html#features">Why Us</a>
+        <a href="index.html#insights">Insights</a>
+        <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="container reveal">
+            <span class="hero-label">Cloud Engineering</span>
+            <h1>Financial Services: <br><span class="text-gradient">Zero-Downtime Migration</span></h1>
+            <p>How an enterprise financial institution migrated their core legacy workloads to the cloud with zero
+                customer disruption and reduced operational costs by 40%.</p>
+
+            <div class="cs-meta">
+                <div class="cs-meta-item">
+                    <span>Industry</span>
+                    <strong>Financial Services (FinTech)</strong>
+                </div>
+                <div class="cs-meta-item">
+                    <span>Timeline</span>
+                    <strong>6 Months</strong>
+                </div>
+                <div class="cs-meta-item">
+                    <span>Cloud Provider</span>
+                    <strong>AWS</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <div class="cs-grid">
+                <div class="cs-main reveal">
+                    <h2>The Challenge</h2>
+                    <p>The client, a rapidly growing mid-sized financial institution, was constrained by an aging,
+                        on-premises data center. Their monolithic architecture made feature deployments slow and risky.
+                        Server provisioning took weeks, drastically hindering their ability to respond to market changes
+                        and launch new digital banking products.</p>
+                    <p>Furthermore, hardware maintenance cycles were eating into the IT budget, and their existing
+                        disaster recovery (DR) setup was untested and unreliable. They needed a leap to the cloud but
+                        could not afford a single minute of downtime for their core transaction processing systems
+                        during the migration.</p>
+
+                    <h2>The Solution Architecture</h2>
+                    <p>Cloudepok architected a comprehensive hybrid-cloud migration strategy using AWS. Instead of a
+                        risky 'big bang' cutover, we designed a phased, strangler-fig migration approach.</p>
+
+                    <ul
+                        style="color: var(--text-secondary); font-size: 1.125rem; line-height: 1.8; margin-bottom: 24px; padding-left: 20px;">
+                        <li><strong>Infrastructure as Code (IaC):</strong> We deployed all foundational AWS
+                            infrastructure (VPCs, Transit Gateways, IAM roles) using Terraform, ensuring perfectly
+                            reproducible environments across Dev, Staging, and Production.</li>
+                        <li><strong>Database Replication:</strong> We utilized AWS Database Migration Service (DMS) to
+                            establish continuous replication from their on-premise Oracle databases to Amazon Aurora
+                            PostgreSQL, safely decoupling the data layer.</li>
+                        <li><strong>Containerization:</strong> We containerized legacy applications and orchestrated
+                            them using Amazon EKS (Elastic Kubernetes Service), immediately improving scalability and
+                            fault tolerance.</li>
+                        <li><strong>CI/CD Pipelines:</strong> Introduced GitLab CI to automate testing and deployments,
+                            moving from quarterly releases to on-demand daily deployments.</li>
+                    </ul>
+
+                    <p>To guarantee zero downtime during the final switch, we implemented an active-active routing setup
+                        at the DNS level, allowing us to bleed traffic over to the AWS environment gradually and
+                        rollback instantly if anomalies were detected.</p>
+
+                    <h2>The Business Impact</h2>
+                    <p>The migration was executed entirely unnoticed by the client's end-users, achieving the primary
+                        goal of zero downtime.</p>
+
+                    <ul class="impact-list">
+                        <li>
+                            <div class="impact-content">
+                                <h4>40% Reduction in TCO</h4>
+                                <p>By eliminating physical data center leases, hardware refresh cycles, and right-sizing
+                                    AWS instances through FinOps practices, the total cost of ownership dropped
+                                    dramatically.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="impact-content">
+                                <h4>Deployment Frequency Increased 20x</h4>
+                                <p>With CI/CD and containerization, the engineering team went from shipping code
+                                    quarterly to releasing multiple times a week securely.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="impact-content">
+                                <h4>Rock-Solid Reliability</h4>
+                                <p>The new Multi-AZ architecture provided an SLA of 99.99%, with automated failovers and
+                                    a tested Disaster Recovery Time Objective (RTO) of under 15 minutes.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="cs-sidebar reveal">
+                    <div class="cs-card">
+                        <h3>Technologies Used</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Terraform</span>
+                            <span class="tech-tag">Amazon EKS</span>
+                            <span class="tech-tag">Amazon Aurora</span>
+                            <span class="tech-tag">AWS DMS</span>
+                            <span class="tech-tag">GitLab CI</span>
+                            <span class="tech-tag">Datadog</span>
+                        </div>
+                    </div>
+
+                    <div class="cs-card" style="background: var(--bg-primary); text-align: center;">
+                        <h3 style="border: none; margin-bottom: 8px;">Ready for your migration?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.875rem; margin-bottom: 24px;">Our experts map
+                            out the safest route to the cloud for your specific workloads.</p>
+                        <a href="index.html#contact" class="btn btn-primary" style="width: 100%;">Schedule a
+                            Consultation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span>Cloud<span>epok</span></span>
+                    </a>
+                    <p>Cloud Engineering & Consulting. We transform businesses with intelligent, scalable systems across
+                        Cloud, Data, and AI.</p>
+                </div>
+                <!-- Standard Footer columns omitted for brevity in demo, keeping it clean -->
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Cloudepok. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); });
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        menuToggle.addEventListener('click', () => { mobileNav.classList.toggle('active'); menuToggle.classList.toggle('active'); });
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); revealObserver.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+
+</html>
