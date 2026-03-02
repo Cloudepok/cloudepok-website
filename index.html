@@ -2,233 +2,634 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cloudepok — AI-First Engineering & Consulting</title>
-  <meta name="description" content="AI-First Engineering & Consulting — Cloud • Data • ML Solutions" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloudepok — Cloud Engineering & Consulting | Cloud • Data • AI</title>
+  <meta name="description"
+    content="Cloudepok is a premium cloud consulting firm specializing in CloudOps, DataOps, MLOps, and Managed Services. We transform businesses with intelligent cloud-native solutions.">
   <meta name="keywords"
-    content="AI consulting, cloud engineering, machine learning, data engineering, MLOps, LLM, AI strategy" />
+    content="Cloud consulting, CloudOps, DataOps, MLOps, Managed Services, cloud engineering, data engineering, machine learning, AI strategy, software engineering">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cloudepok — Cloud Engineering & Consulting">
+  <meta property="og:description"
+    content="Transform your business with cloud and data engineering. We specialize in CloudOps, DataOps, MLOps, and Managed Services.">
+  <meta property="og:type" content="website">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%236366F1'/><stop offset='100%' stop-color='%2306B6D4'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><text x='50' y='68' font-size='50' fill='white' text-anchor='middle' font-family='sans-serif' font-weight='bold'>C</text></svg>">
 
-  <!-- Manrope font -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <canvas id="dots-canvas" aria-hidden="true"></canvas>
+  <!-- Background Effects -->
+  <div class="bg-grid">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
 
-  <div class="top-ribbon">Cloudepok — full website <strong>coming soon</strong>. <a href="#contact">Contact us</a></div>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#" class="logo">
+        <div class="logo-icon">☁️</div>
+        <span>Cloud</span><span>epok</span>
+      </a>
 
-  <header class="site-header">
-    <a class="logo" href="#" aria-label="Cloudepok">
-      <span class="logo-word"><span class="cloud">Cloud</span><span class="epok">epok</span></span>
-    </a>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="index.html#features">Why Us</a></li>
+          <li><a href="index.html#insights">Insights</a></li>
+        </ul>
+        <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+      </nav>
 
-    <div class="nav-actions">
-      <button class="burger two" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu-popover">
-        <span></span><span></span>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-
-      <aside id="menu-popover" class="menu-popover" aria-hidden="true" role="dialog" aria-modal="false">
-        <nav class="menu-list">
-          <a href="#services" class="menu-item">Services</a>
-          <a href="#about" class="menu-item">About</a>
-          <a href="#contact" class="menu-item">Contact</a>
-          <div class="menu-sep"></div>
-          <a href="#contact" class="menu-cta">Get in touch</a>
-        </nav>
-      </aside>
     </div>
   </header>
 
-  <div id="overlay" class="overlay-light" hidden></div>
+  <!-- Mobile Navigation -->
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html#services">Services</a>
+    <a href="case-studies.html">Case Studies</a>
+    <a href="index.html#features">Why Us</a>
+    <a href="index.html#insights">Insights</a>
+    <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+  </nav>
 
-  <main>
-    <section class="hero split">
-      <div class="container split-grid">
-        <div class="left animate-on-scroll">
-          <h1>Transform your business with <span class="text-brand">AI</span></h1>
-          <p class="superpill">Cloud • Data • ML Engineering</p>
-          <p class="lede">We partner with forward-thinking companies to build intelligent, scalable systems that drive
-            real business outcomes—from AI strategy to production-ready solutions.</p>
-          <div class="cta-row">
-            <a class="btn" href="#services">Explore services</a>
-            <a class="btn btn-ghost" href="#contact">Talk to us</a>
-          </div>
+  <!-- Hero Section -->
+  <section class="hero section" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>Cloud & Data Engineering Firm</span>
         </div>
-        <div class="right">
-          <div class="pane animate-on-scroll">
-            <div class="pane-title">AI Strategy</div>
-            <div class="pane-body">
-              <ul>
-                <li>Opportunity mapping & use-case prioritization</li>
-                <li>Governance, ethics & risk frameworks</li>
-                <li>ROI-driven transformation roadmaps</li>
-              </ul>
-            </div>
-          </div>
-          <div class="pane animate-on-scroll">
-            <div class="pane-title">Engineering Excellence</div>
-            <div class="pane-body">
-              <ul>
-                <li>Cloud-native data platforms</li>
-                <li>LLM integrations & AI agents</li>
-                <li>End-to-end MLOps pipelines</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section id="services" class="section">
-      <div class="container">
-        <h2 class="animate-on-scroll">What we do</h2>
-        <div class="grid">
-          <div class="card animate-on-scroll">
-            <h3>AI Strategy & Consulting</h3>
-            <p>Identify high-impact AI opportunities, create actionable roadmaps, and align technology investments with
-              measurable business outcomes.</p>
-            <a class="link" href="#contact">Start a conversation →</a>
-          </div>
-          <div class="card animate-on-scroll">
-            <h3>Cloud & Data Engineering</h3>
-            <p>Design and build modern data platforms on AWS, GCP, or Azure—secure, scalable, and optimized for AI-ready
-              analytics.</p>
-            <a class="link" href="#contact">Start a conversation →</a>
-          </div>
-          <div class="card animate-on-scroll">
-            <h3>Applied ML Solutions</h3>
-            <p>Ship production-grade ML models, LLM-powered features, and autonomous AI agents that integrate seamlessly
-              into your products.</p>
-            <a class="link" href="#contact">Start a conversation →</a>
-          </div>
-        </div>
-      </div>
-    </section>
+        <h1>
+          Transform Your Business with
+          <span class="text-gradient">Cloud-Native Engineering</span>
+        </h1>
 
-    <section id="about" class="section alt">
-      <div class="container narrow">
-        <h2 class="animate-on-scroll">About Cloudepok</h2>
-        <p class="animate-on-scroll">We're a team of engineers, architects, and AI specialists who believe great
-          technology should deliver measurable impact. With deep expertise across cloud infrastructure, data
-          engineering, and machine learning, we help organizations move from AI curiosity to competitive advantage.</p>
-        <p class="animate-on-scroll" style="margin-top: 16px; color: var(--muted);">Whether you're modernizing legacy
-          systems, building your first ML pipeline, or scaling AI across the enterprise—we're here to make it happen.
+        <p class="hero-description">
+          We partner with forward-thinking companies to build intelligent, scalable systems — from
+          cloud architecture and managed services to production-ready data and AI solutions.
         </p>
-      </div>
-    </section>
 
-    <section id="contact" class="section">
-      <div class="container narrow">
-        <h2 class="animate-on-scroll">Let's Build Something Great</h2>
-        <p class="muted animate-on-scroll">We're putting final touches on our full site. <strong>Coming soon</strong> —
-          but you can reach us today.</p>
-        <form id="contact-form" class="contact-form animate-on-scroll"
-          action="https://formspree.io/f/aruna@cloudepok.com" method="POST">
-          <input type="hidden" name="_subject" value="New Cloudepok Contact Form Submission">
-          <input type="hidden" name="_next" value="">
-          <label>
-            <span>Name</span>
-            <input required type="text" name="name" placeholder="Your name" />
-          </label>
-          <label>
-            <span>Email</span>
-            <input required type="email" name="email" placeholder="you@company.com" />
-          </label>
-          <label class="full">
-            <span>Message</span>
-            <textarea required name="message" rows="5" placeholder="How can we help?"></textarea>
-          </label>
-          <button class="btn" type="submit" id="submit-btn">
-            <span class="btn-text">Send message</span>
-            <span class="btn-loading" hidden>Sending...</span>
-          </button>
-        </form>
-        <div id="form-success" class="form-success" hidden>
-          <div class="success-icon">✓</div>
-          <p><strong>Thank you!</strong> We'll get back to you within 24 hours.</p>
+        <div class="hero-actions">
+          <a href="#services" class="btn btn-primary">
+            Explore Services
+            <span class="btn-icon">→</span>
+          </a>
+          <a href="#contact" class="btn btn-secondary">Book a Consultation</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-value" data-count="50">50+</div>
+            <div class="stat-label">Projects Delivered</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">98%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">15+</div>
+            <div class="stat-label">Expert Engineers</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">3</div>
+            <div class="stat-label">Cloud Platforms</div>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
+  <!-- Services Section (Tabbed) -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Our <span class="text-gradient">Service Pillars</span></h2>
+        <p>End-to-end cloud and data solutions across the entire technology stack, designed to drive measurable business
+          outcomes.</p>
+      </div>
+
+      <div class="service-tabs reveal">
+        <button class="tab-btn active" data-tab="cloudops">☁️ CloudOps</button>
+        <button class="tab-btn" data-tab="dataops">📊 DataOps</button>
+        <button class="tab-btn" data-tab="mlops">🤖 MLOps</button>
+        <button class="tab-btn" data-tab="managedservices">🛡️ Managed Services</button>
+      </div>
+
+      <!-- CloudOps Content -->
+      <div class="service-content active" id="cloudops">
+        <div class="service-info">
+          <h3>Cloud Infrastructure & Operations</h3>
+          <p>Design, build, and optimize cloud infrastructure on AWS, GCP, or Azure. We help you achieve cost
+            efficiency, security compliance, and operational excellence.</p>
+          <ul class="service-features">
+            <li>Cloud architecture design & migration</li>
+            <li>Kubernetes & container orchestration</li>
+            <li>Infrastructure as Code (Terraform, Pulumi)</li>
+            <li>Cost optimization & FinOps</li>
+            <li>Security & compliance automation</li>
+            <li>24/7 monitoring & incident response</li>
+          </ul>
+          <a href="cloud-engineering.html" class="btn btn-secondary" style="margin-top: 24px;">Learn Mode</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-icon-large">☁️</div>
+        </div>
+      </div>
+
+      <!-- DataOps Content -->
+      <div class="service-content" id="dataops">
+        <div class="service-info">
+          <h3>Data Engineering & Operations</h3>
+          <p>Build modern data platforms that turn raw data into actionable insights. We design scalable pipelines, data
+            lakes, and analytics systems.</p>
+          <ul class="service-features">
+            <li>Data pipeline design & orchestration</li>
+            <li>Data lake & warehouse architecture</li>
+            <li>Real-time streaming (Kafka, Pub/Sub)</li>
+            <li>Data quality & governance frameworks</li>
+            <li>ETL/ELT automation</li>
+            <li>Business intelligence & dashboards</li>
+          </ul>
+          <a href="data-engineering.html" class="btn btn-secondary" style="margin-top: 24px;">Learn More</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-icon-large">📊</div>
+        </div>
+      </div>
+
+      <!-- MLOps Content -->
+      <div class="service-content" id="mlops">
+        <div class="service-info">
+          <h3>Machine Learning Operations</h3>
+          <p>From model development to production deployment, we build robust ML systems that scale. Specializing in
+            LLMs, GenAI, and traditional ML.</p>
+          <ul class="service-features">
+            <li>ML model training & fine-tuning</li>
+            <li>LLM & GenAI integration</li>
+            <li>Model deployment & serving (Vertex AI, SageMaker)</li>
+            <li>ML pipeline automation (Kubeflow, MLflow)</li>
+            <li>Model monitoring & drift detection</li>
+            <li>AI agents & RAG systems</li>
+          </ul>
+          <a href="ml-engineering.html" class="btn btn-secondary" style="margin-top: 24px;">Learn More</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-icon-large">🤖</div>
+        </div>
+      </div>
+
+      <!-- Managed Services Content -->
+      <div class="service-content" id="managedservices">
+        <div class="service-info">
+          <h3>Cloud Managed Services</h3>
+          <p>Comprehensive management of your cloud infrastructure. We handle operations, security, and optimization so
+            your team can focus on core business objectives.</p>
+          <ul class="service-features">
+            <li>24/7 proactive monitoring & support</li>
+            <li>Cloud cost optimization & FinOps</li>
+            <li>Security, compliance & governance</li>
+            <li>Backup & disaster recovery management</li>
+            <li>Database & infrastructure administration</li>
+            <li>Continuous patch management</li>
+          </ul>
+          <a href="managed-services.html" class="btn btn-secondary" style="margin-top: 24px;">Learn More</a>
+        </div>
+        <div class="service-visual">
+          <div class="service-icon-large">🛡️</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Why <span class="text-gradient">Choose Cloudepok</span></h2>
+        <p>We're not just consultants — we're engineers who ship. Here's what sets us apart.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">🎯</div>
+          <h3>Cloud-Native Approach</h3>
+          <p>Every solution we build is strictly cloud-native, ensuring your systems are scalable, highly available, and
+            future-ready from day one.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🚀</div>
+          <h3>Production-Grade Delivery</h3>
+          <p>We don't just prototype — we ship production systems with proper observability, security, and scalability
+            built in.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">☁️</div>
+          <h3>Multi-Cloud Expertise</h3>
+          <p>Deep expertise across AWS, GCP, and Azure. We help you choose the right platform and optimize costs across
+            clouds.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🔧</div>
+          <h3>End-to-End Ownership</h3>
+          <p>From strategy and architecture to deployment and maintenance — we own the entire delivery lifecycle.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🧠</div>
+          <h3>LLM & GenAI Specialists</h3>
+          <p>Ahead of the curve on LLMs, RAG systems, AI agents, and GenAI applications. We bring cutting-edge AI to
+            your business.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">📈</div>
+          <h3>Measurable Impact</h3>
+          <p>We focus on business outcomes, not just technology. Every project is measured by the value delivered to
+            your organization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="why-section section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Trusted by <span class="text-gradient">Industry Leaders</span></h2>
+        <p>Our track record speaks for itself. Here's what we've achieved for our clients.</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-value">40%</div>
+          <div class="stat-label">Average Cost Reduction</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-value">3x</div>
+          <div class="stat-label">Faster Time to Market</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-value">99.9%</div>
+          <div class="stat-label">System Uptime</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-value">24/7</div>
+          <div class="stat-label">Expert Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>What Our <span class="text-gradient">Clients Say</span></h2>
+        <p>Don't just take our word for it. Here's what leaders say about working with Cloudepok.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <p class="testimonial-text">"Cloudepok transformed our data infrastructure completely. Their MLOps expertise
+            helped us deploy models 5x faster than before. The team's deep knowledge of GCP and Kubernetes was exactly
+            what we needed."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RS</div>
+            <div class="author-info">
+              <strong>Rahul Sharma</strong>
+              <span>CTO, TechScale Inc.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <p class="testimonial-text">"We were struggling with cloud costs and legacy systems. Cloudepok helped us
+            modernize our stack and reduced our cloud spend by 45%. Their engineers are world-class."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">PM</div>
+            <div class="author-info">
+              <strong>Priya Mehta</strong>
+              <span>VP Engineering, DataFlow Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal">
+          <p class="testimonial-text">"The GenAI solution Cloudepok built for us has become central to our product.
+            Their ability to go from concept to production in weeks was impressive. Highly recommend for AI projects."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AK</div>
+            <div class="author-info">
+              <strong>Amit Kumar</strong>
+              <span>CEO, InnovateLabs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog/Insights Section -->
+  <section class="section" id="insights">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Latest <span class="text-gradient">Insights</span></h2>
+        <p>Thought leadership and practical guides from our engineering team.</p>
+      </div>
+
+      <div class="blog-grid">
+        <article class="blog-card reveal">
+          <div class="blog-image">🤖</div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-tag">MLOps</span>
+              <span>Feb 2026</span>
+            </div>
+            <h3>Building Production-Ready RAG Systems: A Complete Guide</h3>
+            <p>Learn how to architect and deploy RAG systems that scale, with lessons from real-world implementations.
+            </p>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-image">☁️</div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-tag">CloudOps</span>
+              <span>Jan 2026</span>
+            </div>
+            <h3>Kubernetes Cost Optimization: 7 Strategies That Actually Work</h3>
+            <p>Practical strategies to reduce your Kubernetes costs by 40% without sacrificing performance or
+              reliability.</p>
+          </div>
+        </article>
+
+        <article class="blog-card reveal">
+          <div class="blog-image">📊</div>
+          <div class="blog-content">
+            <div class="blog-meta">
+              <span class="blog-tag">DataOps</span>
+              <span>Jan 2026</span>
+            </div>
+            <h3>Modern Data Stack in 2026: What's Changed and What Hasn't</h3>
+            <p>A comprehensive look at the evolving data landscape and how to build data platforms that last.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA Section -->
+  <section class="contact-cta section" id="contact">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2>Ready to <span class="text-gradient">Transform Your Business</span>?</h2>
+        <p>Let's discuss how Cloudepok can help you build intelligent, scalable systems that drive real business
+          outcomes.</p>
+
+        <div class="contact-form-section">
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/mkovwzjo" method="POST">
+            <input type="hidden" name="_subject" value="New Cloudepok Contact Form Submission">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@company.com" required>
+              </div>
+            </div>
+
+            <div class="form-group full">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company" placeholder="Your company">
+            </div>
+
+            <div class="form-group full">
+              <label for="message">How can we help?</label>
+              <textarea id="message" name="message" placeholder="Tell us about your project or challenge..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" hidden>Sending...</span>
+              <span class="btn-icon">→</span>
+            </button>
+          </form>
+
+          <div id="formSuccess" class="form-success" hidden>
+            <div class="success-icon">✓</div>
+            <h3>Thank you!</h3>
+            <p>We'll get back to you within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <span>© <span id="year"></span> Cloudepok • AI-First Engineering & Consulting</span>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">☁️</div>
+            <span>Cloud</span><span>epok</span>
+          </a>
+          <p>Cloud Engineering & Consulting. We transform businesses with intelligent, scalable systems across Cloud,
+            Data, and AI.</p>
+          <div class="footer-address"
+            style="margin-top: 16px; color: var(--text-muted); font-size: 0.875rem; line-height: 1.6;">
+            <strong>Cloudepok Technologies Private Limited</strong><br>
+            LG AND UG FLOOR, HNO 70 45, SANGANER<br>
+            KARMA PATEL MARG, MANSAROVAR<br>
+            Jaipur 302020
+          </div>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="GitHub">⌘</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="cloud-engineering.html">Cloud Engineering</a></li>
+            <li><a href="data-engineering.html">Data Engineering</a></li>
+            <li><a href="app-engineering.html">App Engineering</a></li>
+            <li><a href="ml-engineering.html">ML Engineering</a></li>
+            <li><a href="managed-services.html">Managed Services</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#features">About Us</a></li>
+            <li><a href="case-studies.html">Case Studies</a></li>
+            <li><a href="index.html#insights">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">Open Source</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Cloudepok. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
     </div>
   </footer>
 
   <script>
-    // Year
+    // ========================================
+    // Cloudepok Interactive Scripts
+    // ========================================
+
+    // Set current year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Burger + popover logic
-    const burger = document.getElementById('burger');
-    const pop = document.getElementById('menu-popover');
-    const overlay = document.getElementById('overlay');
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
 
-    function setOpen(open) {
-      burger.classList.toggle('open', open);
-      pop.classList.toggle('open', open);
-      burger.setAttribute('aria-expanded', String(open));
-      pop.setAttribute('aria-hidden', String(!open));
-      overlay.hidden = !open;
-    }
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileNav = document.getElementById('mobileNav');
 
-    burger.addEventListener('click', () => setOpen(!pop.classList.contains('open')));
-    overlay.addEventListener('click', () => setOpen(false));
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+    menuToggle.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
 
-    // Close popover then smooth-scroll to anchors
-    function handleMenuClick(e) {
-      const a = e.target.closest('a');
-      if (!a) return;
-      const href = a.getAttribute('href') || '';
-      if (!href.startsWith('#')) { setOpen(false); return; }
-      const target = document.querySelector(href);
-      if (target) {
+    // Close mobile nav on link click
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        menuToggle.classList.remove('active');
+      });
+    });
+
+    // Service tabs functionality
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const serviceContents = document.querySelectorAll('.service-content');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tabId = btn.dataset.tab;
+
+        // Update active states
+        tabBtns.forEach(b => b.classList.remove('active'));
+        serviceContents.forEach(c => c.classList.remove('active'));
+
+        btn.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+
+    // Scroll reveal animations
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        setOpen(false);
-        setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
-        setTimeout(() => history.pushState(null, '', href), 120);
-      }
-    }
-    document.querySelector('.menu-list').addEventListener('click', handleMenuClick);
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
 
-    // Form submission handling
-    const form = document.getElementById('contact-form');
-    const submitBtn = document.getElementById('submit-btn');
-    const btnText = submitBtn.querySelector('.btn-text');
-    const btnLoading = submitBtn.querySelector('.btn-loading');
-    const formSuccess = document.getElementById('form-success');
+        const target = document.querySelector(targetId);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
 
-    form.addEventListener('submit', async (e) => {
+    // Contact form handling
+    const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const formSuccess = document.getElementById('formSuccess');
+
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      // Show loading state
+      const btnText = submitBtn.querySelector('.btn-text');
+      const btnLoading = submitBtn.querySelector('.btn-loading');
+
       btnText.hidden = true;
       btnLoading.hidden = false;
       submitBtn.disabled = true;
 
       try {
-        const response = await fetch(form.action, {
+        const response = await fetch(contactForm.action, {
           method: 'POST',
-          body: new FormData(form),
+          body: new FormData(contactForm),
           headers: { 'Accept': 'application/json' }
         });
 
         if (response.ok) {
-          form.hidden = true;
+          contactForm.hidden = true;
           formSuccess.hidden = false;
         } else {
-          throw new Error('Form submission failed');
+          throw new Error('Submission failed');
         }
       } catch (error) {
         alert('Something went wrong. Please try again or email us directly.');
@@ -237,66 +638,6 @@
         submitBtn.disabled = false;
       }
     });
-
-    // Scroll animations
-    const animateElements = document.querySelectorAll('.animate-on-scroll');
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animated');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-    animateElements.forEach(el => observer.observe(el));
-
-    // Interactive dots background
-    (function () {
-      const c = document.getElementById('dots-canvas');
-      const ctx = c.getContext('2d');
-      let w, h, dots = [], mouse = { x: 0, y: 0 };
-
-      function resize() {
-        w = c.width = window.innerWidth;
-        h = c.height = window.innerHeight;
-        build();
-      }
-
-      function build() {
-        dots = [];
-        const spacing = 36;
-        for (let y = spacing / 2; y < h; y += spacing) {
-          for (let x = spacing / 2; x < w; x += spacing) {
-            dots.push({ x, y, r: 1.2 });
-          }
-        }
-        draw();
-      }
-
-      function draw() {
-        ctx.clearRect(0, 0, w, h);
-        ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--brand-600').trim() || '#FF4713';
-        const maxDist = 160;
-        for (const d of dots) {
-          const dx = d.x - mouse.x;
-          const dy = d.y - mouse.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          const k = Math.max(0, 1 - dist / maxDist);
-          const rad = d.r + k * 1.8;
-          ctx.globalAlpha = 0.08 + k * 0.22;
-          ctx.beginPath();
-          ctx.arc(d.x + dx * 0.02, d.y + dy * 0.02, rad, 0, Math.PI * 2);
-          ctx.fill();
-        }
-        requestAnimationFrame(draw);
-      }
-
-      window.addEventListener('resize', resize);
-      window.addEventListener('mousemove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; });
-      resize();
-    })();
   </script>
 </body>
 

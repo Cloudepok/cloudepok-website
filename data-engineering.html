@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineering | Cloudepok</title>
+    <meta name="description"
+        content="Data Pipelines, Analytics, Data Warehouses, and Data Lakes. Unlock the power of your data with Cloudepok.">
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%236366F1'/><stop offset='100%' stop-color='%2306B6D4'/></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23g)'/><text x='50' y='68' font-size='50' fill='white' text-anchor='middle' font-family='sans-serif' font-weight='bold'>C</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page specific overrides */
+        .page-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 24px;
+        }
+
+        .page-hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .content-grid.reverse>div:first-child {
+            order: 2;
+        }
+
+        .content-text h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .content-text p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+
+        .content-text ul {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .content-text li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-secondary);
+        }
+
+        .content-text li::before {
+            content: '✓';
+            color: var(--brand-accent);
+            font-weight: 700;
+        }
+
+        .visual-box {
+            background: var(--gradient-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius-lg);
+            padding: 40px;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .visual-box::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+        }
+
+        @media (max-width: 768px) {
+
+            .content-grid,
+            .content-grid.reverse {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .content-grid.reverse>div:first-child {
+                order: unset;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Effects -->
+    <div class="bg-grid">
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">☁️</div>
+                <span>Cloud</span><span>epok</span>
+            </a>
+
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="index.html#features">Why Us</a></li>
+                    <li><a href="index.html#insights">Insights</a></li>
+                </ul>
+                <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="index.html#services">Services</a>
+        <a href="case-studies.html">Case Studies</a>
+        <a href="index.html#features">Why Us</a>
+        <a href="index.html#insights">Insights</a>
+        <a href="index.html#contact" class="btn btn-primary">Get Started</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="container reveal">
+            <h1><span class="text-gradient">Data Engineering</span> Services</h1>
+            <p>Transform raw data into actionable intelligence. We architect scalable data pipelines, analytics
+                platforms, and modern warehouses to power your business.</p>
+        </div>
+    </section>
+
+    <!-- Content Section 1 -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid reveal">
+                <div class="content-text">
+                    <h2>Scalable Data <span class="text-gradient">Pipelines</span></h2>
+                    <p>We build robust ETL/ELT pipelines capable of ingesting batch and real-time streaming data from
+                        disparate sources, ensuring data quality and fault tolerance.</p>
+                    <ul>
+                        <li>Stream Processing (Kafka, Pub/Sub, Kinesis)</li>
+                        <li>Batch Processing (Spark, Dataflow)</li>
+                        <li>Orchestration (Airflow, Dagster)</li>
+                        <li>Data Quality & Governance Tools</li>
+                    </ul>
+                </div>
+                <div class="visual-box">🔄</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section 2 -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid reverse reveal">
+                <div class="content-text">
+                    <h2>Warehouses & <span class="text-gradient">Lakes</span></h2>
+                    <p>Centralize your organization's truth. We design and implement high-performance Data Warehouses
+                        and Lakehouse architectures to handle petabyte-scale workloads continuously.</p>
+                    <ul>
+                        <li>Cloud Data Warehouses (BigQuery, Snowflake, Redshift)</li>
+                        <li>Lakehouse Architecture (Databricks, Iceberg/Hudi)</li>
+                        <li>Cost & Query Performance Optimization</li>
+                        <li>Secure Data Governance & Access Control</li>
+                    </ul>
+                </div>
+                <div class="visual-box">🗄️</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section 3 -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid reveal">
+                <div class="content-text">
+                    <h2>Advanced <span class="text-gradient">Analytics</span></h2>
+                    <p>Unlock the value of your stored data. We implement embedded analytics, automated reporting, and
+                        interactive dashboards to give you real-time business insights.</p>
+                    <ul>
+                        <li>Business Intelligence Dashboards (Looker, QuickSight)</li>
+                        <li>Real-time Operational Analytics</li>
+                        <li>Self-Service Analytics Platforms</li>
+                        <li>Predictive Analytics Integration</li>
+                    </ul>
+                </div>
+                <div class="visual-box">📈</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="text-align: center; padding: 100px 0;">
+        <div class="container reveal">
+            <h2 style="margin-bottom: 24px;">Unlock Your Data</h2>
+            <a href="index.html#contact" class="btn btn-primary">Talk to an Expert</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-icon">☁️</div>
+                        <span>Cloud</span><span>epok</span>
+                    </a>
+                    <p>Cloud Engineering & Consulting. We transform businesses with intelligent, scalable systems across
+                        Cloud, Data, and AI.</p>
+                    <div class="footer-address"
+                        style="margin-top: 16px; color: var(--text-muted); font-size: 0.875rem; line-height: 1.6;">
+                        <strong>Cloudepok Technologies Private Limited</strong><br>
+                        LG AND UG FLOOR, HNO 70 45, SANGANER<br>
+                        KARMA PATEL MARG, MANSAROVAR<br>
+                        Jaipur 302020
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="cloud-engineering.html">Cloud Engineering</a></li>
+                        <li><a href="data-engineering.html">Data Engineering</a></li>
+                        <li><a href="app-engineering.html">App Engineering</a></li>
+                        <li><a href="ml-engineering.html">ML Engineering</a></li>
+                        <li><a href="managed-services.html">Managed Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="index.html#insights">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Open Source</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Cloudepok. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); });
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        menuToggle.addEventListener('click', () => { mobileNav.classList.toggle('active'); menuToggle.classList.toggle('active'); });
+        mobileNav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mobileNav.classList.remove('active'); menuToggle.classList.remove('active'); }); });
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); revealObserver.unobserve(entry.target); } }); }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+
+</html>
